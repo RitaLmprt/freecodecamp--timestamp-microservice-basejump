@@ -17,6 +17,9 @@ var getTimeObj = function(dateStr) {
     else if (dateStr.split(" ").length === 3) {
       timeObj.unix = date.getTime()/1000,
       timeObj.natural = dateStr
+    }else {
+    timeObj.unix = null
+      timeObj.natural = null
     }
   return timeObj;
 };
