@@ -2,6 +2,7 @@
 var express = require('express');
 var http = require('http');
 var timestamp = require('./routes/timestamp');
+var whoami = require('./routes/whoami');
 
 // Create instance of app
 var app = express();
@@ -16,6 +17,7 @@ app.get("/", function (req, res) {
 });
 
 app.use('/timestamp', timestamp);
+app.use('/whoami', whoami);
 
 // listen for requests :)
 app.listen(3000, function () {

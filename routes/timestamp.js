@@ -8,7 +8,7 @@ var getTimeObj = function(dateStr) {
     var date = new Date(dateStr);
 
     // Unix format given if string is all digits
-    if (/^\d+$/.test(dateStr)) {
+    if (/^\d{8,}$/.test(dateStr)) {
       var unixVal = Number.parseInt(dateStr);
        timeObj.unix = unixVal;
        timeObj.natural = moment.unix(unixVal).format("MMMM DD, YYYY");
@@ -17,8 +17,8 @@ var getTimeObj = function(dateStr) {
     else if (dateStr.split(" ").length === 3) {
       timeObj.unix = date.getTime()/1000,
       timeObj.natural = dateStr
-    }else {
-    timeObj.unix = null
+    } else {
+      timeObj.unix = null,
       timeObj.natural = null
     }
   return timeObj;
