@@ -3,9 +3,9 @@
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
 
-  "name": "timestamp-app",
+  "name": "api-microservices",
   "version": "0.0.1",
-  "description": "Select between viewing several APIs created for different purposes",
+  "description": "Microservices as a part of FreeCodeCamp Backend Sertificate",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
