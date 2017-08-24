@@ -4,8 +4,8 @@ var router = express.Router();
 var moment = require('moment');
 
 var getTimeObj = function(dateStr) {
-  var timeObj = { unix: null, natural: null};
-    var date = new Date(dateStr);
+var timeObj = { unix: null, natural: null};
+var date = new Date(dateStr);
 
     // Unix format given if string is all digits
     if (/^\d+$/.test(dateStr)) {
@@ -18,7 +18,7 @@ var getTimeObj = function(dateStr) {
       timeObj.unix = date.getTime()/1000,
       timeObj.natural = dateStr
     }
-  return timeObj;
+    return timeObj;
 };
 
 router.get("/", function (req, res) {
